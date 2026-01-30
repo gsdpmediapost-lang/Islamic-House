@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <style>
+    
+* {
+box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+.button:hover {
+  background-color: #f1f1f1;
+}
+
+/* News Ticker */
+.news-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.3);
+z-index: 1000;
+background: white;
+}
+.news-container .title {
+    position: absolute;
+    background: #df2020;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    color: white;
+    font-weight: bold;
+    z-index: 200;
+}
+
+.news-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    animation: scroll 25s infinite linear;
+}
+
+.news-container ul li {
+    white-space: nowrap;
+    padding: 10px 24px;
+    color: #494949;
+    position: relative;
+}
+
+.news-container ul li::after {
+    content:"";
+    width: 1px;
+    height: 100%;
+    background: #b8b8b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.news-container ul li:last-child::after {
+    display: none;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-1083px);
+
+    }
+}
+
+body{
+margin-top: 45px;
+}
+
+
+.scroll-container {
+  background-color: white;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.scroll-container figure {
+  display: inline-block;
+  margin: 0 1px;
+  position: relative;          /* Needed for caption overlay */
+}
+
+.scroll-container img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 6px;
+}
+
+.scroll-container figcaption {
+  position: absolute;
+  bottom: 0;                   /* Stick to bottom of image */
+  left: 0;
+  width: 100%;                 /* Full width caption */
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+<p>
+<center>
+    <td><strong><font size='4'>Islamic House</font></strong></td>
+<br/>
+<td><strong><font size='2'>Promote Business &amp; Entertainment</font></strong></td>
+</center>
+</p>
+  </header>
+<p>
+<center>
+<div id='headerbright'>
+<div id='top-social-profiles'>
+<div class='widget-container'>
+<div class='social-profiles-widget'>
+    <a href='https://twitter.com/' target='_blank'><img alt='Twitter' src='https://3.bp.blogspot.com/-At2fKKXOTqg/WfxtIiDv5oI/AAAAAAAASuQ/jPOX__UfY9cR5fMlafZ7aaa2El86c30UgCLcBGAs/s1600/twitter.png' title='Twitter'/></a>
+    <a href='https://www.facebook.com/share/1HNycbBHFc/' target='_blank'><img alt='Facebook' src='https://4.bp.blogspot.com/-9riVGWz3Xg8/WfxtGWcN71I/AAAAAAAASt0/nzzviSQcOKI0v0NLslDBuZ3Dz6Ct5-XvgCLcBGAs/s1600/facebook.png' title='Facebook'/></a>
+    <a href='https://www.instagram.com/gsdpmediapost?igsh=YzB3YmxrNHFzZ3Zt' target='_blank'><img alt='Instagram' src='https://2.bp.blogspot.com/-u1yHMS9lqX4/WfxtHHtUhTI/AAAAAAAASuA/d1UkV4KqPogqnLKqwzAdLtucKGZ5YC8IQCLcBGAs/s1600/instagram.png' title='Instagram'/></a>
+    <a href='https://youtube.com/@gsdmediapost?si=nvTwtXOQxx9NwZva' target='_blank'><img alt='Youtube' src='https://4.bp.blogspot.com/-crHrg8Pm0fc/WfxtJJRccHI/AAAAAAAASuY/HTKz0nU0Yh03dr0MJgeawQV1xI0aSyhLQCLcBGAs/s1600/youtube.png' title='Youtube'/></a>
+    <a href='https://www.linkedin.com/' target='_blank'><img alt='Linkedin' src='https://3.bp.blogspot.com/-O0aI3xB_V_Y/WfxtHi0H3nI/AAAAAAAASuE/ssR_LyL834gqCu6wOjQjt6iHu5MvHXP_gCLcBGAs/s1600/linkdin.png' title='Linkedin'/></a>
+</div>
+</div>
+</div>
+</div>
+ </center>
+</p>
+<hr/>
+<td><strong><font size='4'>TRENDING</font></strong></td>
+<p>
+<center>
+<div class="row">
+  <div class="column">
+    <img src="https://www.dropbox.com/scl/fi/ifttr1zgcraf3g05pyu6m/QmediaMp3-Abdulbasit-Abdusamad.jpg?rlkey=s194a4s3dd1ocqhf1wf8g7fie&amp;st=bqkyy60l&amp;dl=1" alt="Snow" style="width:100%">
+<td><strong><font size='1'>Sheikh Name</font></strong></td>
+<br/>
+<td><strong><font size='1'>Recite title</font></strong></td>
+  </div>
+
+  <div class="column">
+    <img src="https://www.dropbox.com/scl/fi/ifttr1zgcraf3g05pyu6m/QmediaMp3-Abdulbasit-Abdusamad.jpg?rlkey=s194a4s3dd1ocqhf1wf8g7fie&amp;st=bqkyy60l&amp;dl=1" alt="Forest" style="width:100%">
+<td><strong><font size='1'>Sheikh Name</font></strong></td>
+<br/>
+<td><strong><font size='1'>Recite title</font></strong></td>
+  </div>
+<div class="column">
+    <img src="https://www.dropbox.com/scl/fi/ifttr1zgcraf3g05pyu6m/QmediaMp3-Abdulbasit-Abdusamad.jpg?rlkey=s194a4s3dd1ocqhf1wf8g7fie&amp;st=bqkyy60l&amp;dl=1" alt="Forest" style="width:100%">
+<td><strong><font size='1'>Sheikh Name</font></strong></td>
+<br/>
+<td><strong><font size='1'>Recite title</font></strong></td>
+  </div>
+<div class="column">
+    <img src="https://www.dropbox.com/scl/fi/ifttr1zgcraf3g05pyu6m/QmediaMp3-Abdulbasit-Abdusamad.jpg?rlkey=s194a4s3dd1ocqhf1wf8g7fie&amp;st=bqkyy60l&amp;dl=1" alt="Forest" style="width:100%">
+<td><strong><font size='1'>Sheikh Name</font></strong></td>
+<br/>
+<td><strong><font size='1'>Recite title</font></strong></td>
+  </div>
+<div class="column">
+    <img src="https://www.dropbox.com/scl/fi/ifttr1zgcraf3g05pyu6m/QmediaMp3-Abdulbasit-Abdusamad.jpg?rlkey=s194a4s3dd1ocqhf1wf8g7fie&amp;st=bqkyy60l&amp;dl=1" alt="Forest" style="width:100%">
+<td><strong><font size='1'>Sheikh Name</font></strong></td>
+<br/>
+<td><strong><font size='1'>Recite title</font></strong></td>
+  </div>
+  <div class="column">
+    <img src="https://www.dropbox.com/scl/fi/ifttr1zgcraf3g05pyu6m/QmediaMp3-Abdulbasit-Abdusamad.jpg?rlkey=s194a4s3dd1ocqhf1wf8g7fie&amp;st=bqkyy60l&amp;dl=1" alt="Mountains" style="width:100%">
+<td><strong><font size='1'>Sheikh Name</font></strong></td>
+<br/>
+<td><strong><font size='1'>Recite title</font></strong></td>
+  </div>
+</div>
+</center>
+</p>
+<p>
+<center>
+<a href'  http://127.0.0.1:18187/main/0/storage/emulated/0/Download/Gsdpmediapost/More-Trending.html'>
+<button class="button"><strong>More Trending</strong></button>
+</a>
+</center>
+</p>
+<hr/>
+
+ <td><strong><font size='4'>TOP RECITATION</font></strong></td>
+<div class='scroll-container'>
+  <figure>
+    <img alt='QmediaMp3' src=' https://www.dropbox.com/scl/fi/z25qwg5ufcmai56q09ucg/PHOTO-2026-01-20-08-58-54.jpg?rlkey=zxilc4s2gtzp4kr5ts1l3d3n3&amp;st=dl0nklu6&amp;dl=1'/>
+    <figcaption>Abdul Rahman</figcaption>
+  </figure>
+  <figure>
+    <img alt='QmediaMp3' src='https://www.dropbox.com/scl/fi/74tf4w3ggkiqzk36yvxx3/QmediaMp3-Saad-El-Ghamidi.jpg?rlkey=tfrbya6lw64u8lw7dwud4h2en&amp;st=ncorxpsb&amp;dl=1'/>
+    <figcaption>Saad El Ghamidi</figcaption>
+  </figure>
+  <figure>
+    <img alt='QmediaMp3' src='https://www.dropbox.com/scl/fi/7fyyw4verjsgkuqk46drp/QmedaiMp3-Mishary-Rashid-Alafasy.jpg?rlkey=g3zvh92f9846s4zgon8hdegm2&amp;st=8k1c6sx9&amp;dl=1'/>
+    <figcaption>Mishary Rashid Alafasy</figcaption>
+  </figure>
+  <figure>
+    <img alt='QmediaMp3' src='https://www.dropbox.com/scl/fi/7kg9hrviqzdbwdn5zj129/QmediaMp3-Maher-Mueaqly.jpg?rlkey=6h86gj53f1g8fakju5c3qa6v2&amp;st=0p2go57d&amp;dl=1'/>
+    <figcaption>Maher Mueaqly</figcaption>
+  </figure>
+  <figure>
+    <img alt='QmediaMp3' src='https://www.dropbox.com/scl/fi/ifttr1zgcraf3g05pyu6m/QmediaMp3-Abdulbasit-Abdusamad.jpg?rlkey=s194a4s3dd1ocqhf1wf8g7fie&amp;st=bqkyy60l&amp;dl=1'/>
+    <figcaption>Abdulbasit Abdusamad</figcaption>
+  </figure>
+<figure>
+    <img alt='QmediaMp3' src='https://www.dropbox.com/scl/fi/7iyq18dyh47w1oh3who5z/QmediaMp3Mahmoud-Khalil.jpg?rlkey=9nd9zggh153gyfhlgwdd5ylae&amp;st=ivslzcbr&amp;dl=1'/>
+    <figcaption>Mahmoud Khalil</figcaption>
+  </figure>
+  <figure>
+    <img alt='QmediaMp3' src='https://www.dropbox.com/scl/fi/cpw2ecliifzys7kwahhbz/QmediaMp3-Mufti-Menk.jpg?rlkey=ivs4tmrp4f13ek21ceogab7yf&amp;st=8a1m54k2&amp;dl=1'/>
+    <figcaption>Mufti Menk</figcaption>
+  </figure>
+</div>
+  
+  <p>
+<center>
+<button class='button'><strong>MORE RECITATION</strong></button>
+    </center>
+  </p>
+
+
+<div class='news-container'>
+        <div class='title'>
+            Urgent News
+        </div>
+
+        <ul>
+            <li>
+               Gsdpmediapost @Work
+            </li>
+            
+            <li>Gsdpmediapost @Work
+            </li>
+          
+           <li>Gsdpmediapost @Work
+            </li>
+
+          
+           <li>Gsdpmediapost @Work
+            </li>
+
+
+            <li>
+                Gsdpmediapost @Work
+            </li>
+        </ul>
+    </div>
+<hr/>
+<p>
+<center>
+<div style='clear:both;'/>
+
+<div id='footer-container'>
+<div id='footer'>
+<div id='copyrights'>
+Copyright &#169; <script type='text/javascript'>var creditsyear = new Date();document.write(creditsyear.getFullYear());</script> <a expr:href='data:blog.homepageUrl'><data:blog.title/></a>
+</div>
+</center>
+</p>
+
+
+<p>
+<center>
+  <a href='https://gsdpmediapost.blogspot.com/contact-us-gsdpmediapost'><strong><font color='black'><font size='3'>Contact Us&#160;</font></font></strong></a>
+   <a href='https://gsdpmediapost.blogspot.com/about-us-gsdpmediapost-header'><strong><font color='black'><font size='3'>About Us&#160;</font></font></strong></a>
+   <a href='https://gsdpmediapost.blogspot.com/privacy-policy-gsdpmediapost-body-font'><strong><font color='black'><font size='3'>Privacy &amp; Policy</font></font></strong></a>
+  </center>
+  </p>
+  
+</body>
+</html>
